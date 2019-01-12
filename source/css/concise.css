@@ -166,7 +166,6 @@ body {
 
 nav {
   background: #fff;
-  /* height: 80px;*/
   position: fixed;
   z-index: 999;
   width: inherit;
@@ -174,7 +173,7 @@ nav {
   border: 1px solid rgba(34,36,38,.15);
 }
 
-.wrap {
+.container {
   width: 100%;
   /* max-width: 1200px; */
   margin: 0 auto;
@@ -364,7 +363,7 @@ pre .javascript .function {
   margin-left: 20px;
 }
 
-h1.prince-log {
+h1.concise-log {
   line-height: 60px;
   font-family: 'Oswald', sans-serif, 'Microsoft YaHei', STHeiti;
   text-transform: uppercase;
@@ -373,7 +372,7 @@ h1.prince-log {
   font-size: 20px;
 }
 
-h1.prince-log a {
+h1.concise-log a {
   color: #424243;
 }
 
