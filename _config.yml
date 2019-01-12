@@ -1,0 +1,33 @@
+#header
+name: CHUN'S NOTE
+description: Keep it short. Keep it simple.
+favicon: /fav.png
+ga: ''
+
+#nav
+nav:
+    archive: 
+      url: /archives/
+      fontClass: "fas fa-archive"
+    about: 
+      url: /about/
+      fontClass: "fas fa-id-card"
+    github: 
+      url: https://github.com/chunliu
+      fontClass: "fab fa-github"
+    rss: 
+      url: /atom.xml
+      fontClass: "fas fa-rss"
+
+#post
+excerpt_link: Continue Reading
+
+
+#about me
+aboutMeImg: /aboutme.jpg
+
+github: https://github.com/chunliu
+twitter: https://twitter.com/chunliums
+
+#copyright
+themeLink: https://github.com/chunliu/hexo-theme-prince
