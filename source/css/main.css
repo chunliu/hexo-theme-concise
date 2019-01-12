@@ -1124,30 +1124,11 @@ h3.aside-title {
   opacity: 0.8;
 }
 
-.github-link::after {
-  font-family: FontAwesome;
-  content: "\f09b";
+.social-icon {
   margin: 10px;
   color: #000;
   font-size: 18px;
 }
-
-.twitter-link::after {
-  font-family: FontAwesome;
-  content: "\f099";
-  margin: 10px;
-  color: #000;
-  font-size: 18px;
-}
-
-.weibo-link::after {
-  font-family: FontAwesome;
-  content: "\f18a";
-  margin: 10px;
-  color: #000;
-  font-size: 18px;
-}
-
 
 /*-----------------------------------------------------------------------------------*/
 
@@ -1249,5 +1230,5 @@ h3.aside-title {
 
 .nav-icon {
   margin: 10px;
-  font-size: 18px;
+  font-size: 16px;
 }
