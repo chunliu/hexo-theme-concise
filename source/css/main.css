@@ -65,6 +65,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: 'Oswald';
   font-size: 100%;
   font-weight: normal
 }
@@ -196,15 +197,6 @@ main::after {
   content: '';
   clear: both;
   display: block;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Oswald', sans-serif, 'Microsoft YaHei', STHeiti;
 }
 
 p {
@@ -483,7 +475,6 @@ h1.prince-log a {
 }
 
 .post-title {
-  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,'PingFang SC','Microsoft YaHei','Source Han Sans SC','Noto Sans CJK SC','WenQuanYi Micro Hei',sans-serif;
   margin-bottom: 25px;
   margin-top: 20px;
   text-align: center;
@@ -492,11 +483,6 @@ h1.prince-log a {
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 10px;
-}
-
-.post-title a {
-  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,'PingFang SC','Microsoft YaHei','Source Han Sans SC','Noto Sans CJK SC','WenQuanYi Micro Hei',sans-serif;
-  color: #000;
 }
 
 .post-title a:hover {
@@ -578,7 +564,6 @@ h1.prince-log a {
 .post-entry h6,
 .post-entry hr {
   margin-bottom: 20px;
-  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,'PingFang SC','Microsoft YaHei','Source Han Sans SC','Noto Sans CJK SC','WenQuanYi Micro Hei',sans-serif;
 }
 
 .post-entry h1,
@@ -1253,13 +1238,13 @@ h3.aside-title {
 }
 
 .copyright p {
-  font-size: 12px;
+  font-size: 14px;
   color: rgba(255,255,255,.9);
-  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,'PingFang SC','Microsoft YaHei','Source Han Sans SC','Noto Sans CJK SC','WenQuanYi Micro Hei',sans-serif;
 }
 
 .copyright p a {
   color: #fff;
+  text-decoration: underline;
 }
 
 .nav-icon {

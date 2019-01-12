@@ -1,0 +1,9 @@
+extends _partial/layout.pug
+
+block container
+  include mixins/post.pug
+  +post(page)
+
+block pagination
+  include mixins/paginator.pug
+  +post()
