@@ -880,22 +880,17 @@ a.article-more:hover {
   color: #000;
 }
 
-.post-tags-box {
-  height: 32px;
-  text-align: center;
-  display: inline-block;
-  float: right;
-}
-
-.post-tags-box::before {
-  font-family: FontAwesome;
-  content: "\f02c";
+.post-tags-icon {
   margin-right: 9px;
   color: #000;
   font-size: 12px;
 }
 
 .post-tags-box {
+  height: 32px;
+  text-align: center;
+  display: inline-block;
+  float: right;
   transition: .3s;
   color: #797979;
   font-size: 12px;
@@ -1019,14 +1014,6 @@ aside.sidebar {
 .post-item a:hover .post-title,
 .post-item a:hover .post-date {
   opacity: .60;
-}
-
-.postList-tags-box::before {
-  font-family: FontAwesome;
-  content: "\f02c";
-  margin-right: 9px;
-  color: #000;
-  font-size: 12px;
 }
 
 .postList-tags-box {
