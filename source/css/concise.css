@@ -173,9 +173,8 @@ nav {
   border: 1px solid rgba(34,36,38,.15);
 }
 
-.container {
+.concise-container {
   width: 100%;
-  /* max-width: 1200px; */
   margin: 0 auto;
   box-shadow: 0 0 15px 15px rgba(200, 200, 200, .14);
   position: relative;
@@ -384,6 +383,12 @@ h1.concise-log a {
   font-weight: 600;
   margin-top: 12px;
   display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  main {
+    max-width: calc(100% - 2em);
+  }
 }
 
 @media only screen and (min-width: 768px) {
