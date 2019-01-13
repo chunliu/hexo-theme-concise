@@ -20,7 +20,8 @@ nav:
       fontClass: "fas fa-rss"
 
 #post
-excerpt_link: Continue Reading
+excerpt_length: 400
+excerpt_link: Read More
 
 
 #about me

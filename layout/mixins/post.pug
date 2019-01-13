@@ -21,13 +21,15 @@ mixin posts()
           else
             a.post-link(href=url_for(item.path))=title
         +postInfo(item)
-        if item.excerpt
+        - item.excerpt = generateExcerpt(item, theme.excerpt_length)
+        if item.excerpt !== ""
           .post-entry!= item.excerpt
         else
           .post-entry
             != item.content
         .post-meta
-          a(href=url_for(item.path)).article-more= theme.excerpt_link
+          if item.excerpt !== ""
+            a(href=url_for(item.path)).article-more= theme.excerpt_link
           if (item.tags && item.tags.length >0)
             .post-tags-box
               i.post-tags-icon.fas.fa-tags
