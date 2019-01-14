@@ -964,6 +964,20 @@ aside.sidebar {
 /*  ARCHIVE-POST
 /*-----------------------------------------------------------------------------------*/
 
+.archive-tag {
+  font-size: 18px;
+  color: #999999;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.archive-tag-year {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.archive-art-list {
+  margin-left: 24px;
+}
+
 .post-item>a {
   display: block;
 }
@@ -985,11 +999,14 @@ aside.sidebar {
 }
 
 .post-item a .post-title {
-  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,'PingFang SC','Microsoft YaHei','Source Han Sans SC','Noto Sans CJK SC','WenQuanYi Micro Hei',sans-serif;
+  font-family: 'Oswald',Helvetica Neue,'PingFang SC','Microsoft YaHei','Source Han Sans SC','Noto Sans CJK SC','WenQuanYi Micro Hei',sans-serif;
   text-align: left;
   margin: 0px;
-  font-weight: 400;
   text-transform: uppercase;
+}
+.post-item a .post-date {
+  text-align: right;
+  color: #808080;
 }
 
 @media only screen and (max-width: 767px) {
@@ -1002,17 +1019,20 @@ aside.sidebar {
     margin: 8px 0;
   }
   .post-item a .post-title {
-    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,'PingFang SC','Microsoft YaHei','Source Han Sans SC','Noto Sans CJK SC','WenQuanYi Micro Hei',sans-serif;
-    height: 18px;
-    line-height: 18px;
-    padding-left: 0px;
+    font-family: 'Oswald',Helvetica Neue,'PingFang SC','Microsoft YaHei','Source Han Sans SC','Noto Sans CJK SC','WenQuanYi Micro Hei',sans-serif;
+    font-size:14px;
+    text-transform: uppercase;
   }
   .post-item a .post-date {
     text-align: right;
-    height: 18px;
-    line-height: 18px;
-    font-size: 12px;
+    font-size: 14px;
     color: #808080;
+  }
+  .archive-tag {
+    font-size: 14px;
+    color: #999999;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 

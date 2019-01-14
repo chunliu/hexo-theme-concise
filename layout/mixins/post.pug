@@ -76,19 +76,34 @@ mixin postTagList()
       -})
     -})
 
-
 mixin postList()
   .archive.col-md-8.col-xs-12
-    - var posts = site.posts.sort('date',-1)
-    - posts.each(function(item){
-      .post-item
-        -var title = item.title !== '' ? item.title:__('no title')
-        if item.link !== ''
-          a.post-item-link(href=url_for(item.link) target='_blank')
-            span.post-title.col-sm-9.col-xs-12=title
-            span.post-date.col-sm-3.col-xs-12=full_date(item.date,'MMM Do YYYY')
-        else
-          a.post-item-link(href=url_for(item.path))
-            span.post-title.col-sm-9.col-xs-12=title
-            span.post-date.col-sm-3.col-xs-12=full_date(item.date,'MMM Do YYYY')
-    -})
+    - 
+      var years = {}
+      site.posts.sort('date').reverse().forEach(function(post){
+        var year = post.date.year()
+        if(years[year]===undefined){
+            years[year] = [];
+        }
+        years[year].push(post);
+      })
+
+    - Object.keys(years).reverse().forEach(function(year){
+        .post-item
+          span.fa.fa-calendar.archive-tag
+            span.archive-tag-year= year
+          ul.archive-art-list
+            - years[year].map(function(post){
+                li.row
+                  span.fa.fa-angle-double-right.archive-tag.col-sm-1.col-xs-1
+                  -var title = post.title !== '' ? post.title:__('no title')
+                  if post.link !== ''
+                    a.post-item-link(href=url_for(post.link) target='_blank')
+                      span.post-title.post-title.col-sm-8.col-xs-12=title
+                      span.post-date.col-sm-3.col-xs-10=full_date(post.date,'MMM Do')
+                  else
+                    a.post-item-link(href=url_for(post.path))
+                      span.post-title.col-sm-8.col-xs-8=title
+                      span.post-date.col-sm-3.col-xs-3=full_date(post.date,'MMM Do')
+            - })
+    - })
