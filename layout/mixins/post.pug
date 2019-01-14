@@ -77,6 +77,14 @@ mixin postTagList()
     -})
 
 mixin postList()
+  script.
+    function yearClicked(node) {
+      if($(node).children("i").hasClass("fa-angle-right")) {
+        $(node).children("i").removeClass("fa-angle-right").addClass("fa-angle-down");
+      } else {
+        $(node).children("i").removeClass("fa-angle-down").addClass("fa-angle-right");
+      }
+    }
   .archive.col-md-8.col-xs-12
     - 
       var years = {}
@@ -91,16 +99,18 @@ mixin postList()
     - Object.keys(years).reverse().forEach(function(year){
         .post-item
           span.fa.fa-calendar.archive-tag
-            span.archive-tag-year= year
-          ul.archive-art-list
+            a(href='#'+year, data-toggle="collapse", onclick="yearClicked(this)")
+              span.archive-tag-year= year
+              i.fas.fa-angle-right
+          div(id=year).archive-art-list.collapse
             - years[year].map(function(post){
-                li.row
+                .row
                   span.fa.fa-angle-double-right.archive-tag.col-sm-1.col-xs-1
                   -var title = post.title !== '' ? post.title:__('no title')
                   if post.link !== ''
                     a.post-item-link(href=url_for(post.link) target='_blank')
-                      span.post-title.post-title.col-sm-8.col-xs-12=title
-                      span.post-date.col-sm-3.col-xs-10=full_date(post.date,'MMM Do')
+                      span.post-title.col-sm-8.col-xs-8=title
+                      span.post-date.col-sm-3.col-xs-3=full_date(post.date,'MMM Do')
                   else
                     a.post-item-link(href=url_for(post.path))
                       span.post-title.col-sm-8.col-xs-8=title

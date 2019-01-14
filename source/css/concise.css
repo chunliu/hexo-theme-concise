@@ -964,7 +964,8 @@ aside.sidebar {
 /*  ARCHIVE-POST
 /*-----------------------------------------------------------------------------------*/
 
-.archive-tag {
+.archive-tag,
+.archive-tag a {
   font-size: 18px;
   color: #999999;
   margin-top: 10px;
@@ -1028,7 +1029,8 @@ aside.sidebar {
     font-size: 14px;
     color: #808080;
   }
-  .archive-tag {
+  .archive-tag,
+  .archive-tag a {
     font-size: 14px;
     color: #999999;
     margin-top: 10px;
