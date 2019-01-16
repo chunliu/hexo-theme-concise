@@ -23,6 +23,8 @@ nav:
 excerpt_length: 400
 excerpt_link: Read More
 
+#google analytics
+google_analytics: UA-44488452-2
 
 #about me
 aboutMeImg: /aboutme.jpg
