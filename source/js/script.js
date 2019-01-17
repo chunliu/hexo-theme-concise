@@ -1,19 +1,11 @@
 (function (a) {
   "use strict";
 
-  var appendStylesheet = function (url) {
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = url;
-    document.body.appendChild(link);
-  };
-
-  appendStylesheet('//cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css');
-
   var $ = a;
   $('.post-block p img').each(function () {
     $(this).wrap('<a data-fancybox="images" href="' + this.src + '" data-caption=" ' + this.alt + '" class="fancybox"></a>');
-    $(this).attr('src', this.src + '?imageMogr2/thumbnail/300x300/gravity/North/crop/200x200');
+    $(this).attr('src', this.src);
+    $(this).attr('width', 500);
   });
 
   if ($.fancybox) {
@@ -22,29 +14,14 @@
         // showOnStart: true
       },
       caption: function (instance, item) {
-        var caption, link;
+        var caption;
         if (item.type === 'image') {
           caption = $(this).data('caption');
-          link = '<a href="' + item.src + '">Download</a>';
-          return (caption ? caption : '') + link;
+          return (caption ? caption : '');
         }
       },
     });
   }
-
-  // if ($.fancybox) {
-  //   $('.post-block p img')
-  //     .on('click', function () {
-  //       $.fancybox.open([{
-  //         src: this.src,
-  //         opts: {
-  //           caption: '<a href="' + this.src + '" target="_blank" download>Download</a>'
-  //         }
-  //       }]);
-  //     });
-  //   // $.fancybox.defaults.speed = 1000;
-  // }
-
 
   function b(a) {
     var c, d, b = [];
