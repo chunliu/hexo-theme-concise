@@ -21,7 +21,6 @@ mixin posts()
           else
             a.post-link(href=url_for(item.path))=title
         +postInfo(item)
-        - item.excerpt = generateExcerpt(item, theme.excerpt_length)
         if item.excerpt !== ""
           .post-entry!= item.excerpt
         else
