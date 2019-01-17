@@ -22,7 +22,7 @@ mixin posts()
             a.post-link(href=url_for(item.path))=title
         +postInfo(item)
         if item.excerpt !== ""
-          .post-entry!= item.excerpt
+          .post-entry!= item.excerpt + '<strong>...</strong>'
         else
           .post-entry
             != item.content

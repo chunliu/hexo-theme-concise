@@ -20,8 +20,7 @@ nav:
       fontClass: "fas fa-rss"
 
 #post
-excerpt_length: 400
-excerpt_link: Read More
+excerpt_link: Continue Reading
 
 #google analytics
 google_analytics: UA-44488452-2
